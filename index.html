@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body ng-app="app" ng-controller="appController as cont">
+    <button ng-click="cont.addword()">Words</button>
+    <button ng-click="cont.addstyledword()">Styled Words</button>
+    <button ng-click="cont.addphrase()">Phrases</button>
+    <button ng-click="cont.addstyledphrase()">Style Phrases</button>
+    
+    <span ng-repeat="words in cont.WordArray " ng-class="words.styleName" > {{words.content}}</span>
+    
+    
+    
+    
+    <script src="index.js"></script>
+    <script src="Controller.js"></script>
+  </body>
+</html>
